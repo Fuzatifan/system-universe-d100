@@ -1,0 +1,427 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a0033 0%, #2d1b4e 50%, #1a0033 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Bannière */
+.banner {
+    background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.5);
+}
+
+.banner-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.music-player iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.version-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #9c27b0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(74, 20, 140, 0.3);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    padding: 1rem 2rem;
+    background: rgba(156, 39, 176, 0.3);
+    border: 2px solid #9c27b0;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(156, 39, 176, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.5);
+}
+
+.nav-button:focus {
+    outline: 3px solid #ce93d8;
+    outline-offset: 2px;
+}
+
+.nav-button.active {
+    background: #9c27b0;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.7);
+}
+
+/* Contenu Principal */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ce93d8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #ba68c8;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Cartes de fonctionnalités */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: rgba(156, 39, 176, 0.2);
+    border: 2px solid #9c27b0;
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(156, 39, 176, 0.5);
+    background: rgba(156, 39, 176, 0.3);
+}
+
+/* Lanceur de dés */
+.dice-launcher {
+    text-align: center;
+    padding: 2rem;
+}
+
+.dice-button {
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.5);
+}
+
+.dice-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(156, 39, 176, 0.7);
+}
+
+.dice-button:focus {
+    outline: 3px solid #ce93d8;
+    outline-offset: 4px;
+}
+
+.dice-button:active {
+    transform: scale(0.95);
+}
+
+.dice-result {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ce93d8;
+    text-shadow: 0 0 20px rgba(206, 147, 216, 0.8);
+    min-height: 4rem;
+}
+
+.dice-history {
+    margin-top: 3rem;
+    background: rgba(156, 39, 176, 0.2);
+    border: 2px solid #9c27b0;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.dice-history h3 {
+    margin-top: 0;
+}
+
+#historyList {
+    list-style: none;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#historyList li {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background: rgba(74, 20, 140, 0.3);
+    border-radius: 8px;
+}
+
+/* Campagne */
+.campaign-info {
+    background: rgba(156, 39, 176, 0.2);
+    border: 2px solid #9c27b0;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.factions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.faction-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.faction-equilibre {
+    background: rgba(244, 67, 54, 0.2);
+    border-color: #f44336;
+}
+
+.faction-libres {
+    background: rgba(76, 175, 80, 0.2);
+    border-color: #4caf50;
+}
+
+.faction-architectes {
+    background: rgba(33, 150, 243, 0.2);
+    border-color: #2196f3;
+}
+
+.faction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(156, 39, 176, 0.5);
+}
+
+.campaign-acts {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.campaign-acts li {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: rgba(74, 20, 140, 0.3);
+    border-left: 4px solid #9c27b0;
+    border-radius: 5px;
+}
+
+/* Téléchargements */
+.downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.download-card {
+    background: rgba(156, 39, 176, 0.2);
+    border: 2px solid #9c27b0;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.download-card.accessible {
+    border-color: #4caf50;
+    background: rgba(76, 175, 80, 0.2);
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(156, 39, 176, 0.5);
+}
+
+.download-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.download-card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.download-size {
+    color: #ba68c8;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.download-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #9c27b0;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    background: #7b1fa2;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.7);
+}
+
+.download-button:focus {
+    outline: 3px solid #ce93d8;
+    outline-offset: 2px;
+}
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    background: rgba(74, 20, 140, 0.3);
+    border-top: 2px solid #9c27b0;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .banner-text h1 {
+        font-size: 2rem;
+    }
+    
+    .navigation {
+        flex-direction: column;
+    }
+    
+    .nav-button {
+        width: 100%;
+    }
+    
+    .downloads-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Accessibilité */
+:focus-visible {
+    outline: 3px solid #ce93d8;
+    outline-offset: 2px;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(74, 20, 140, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9c27b0;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7b1fa2;
+}
+

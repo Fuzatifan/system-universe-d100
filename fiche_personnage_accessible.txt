@@ -1,0 +1,79 @@
+Fiche de Personnage - System Universe d100 (Version Accessible)
+
+Informations Générales
+
+Nom du Personnage : 
+Nom du Joueur : 
+Classe : 
+Niveau : 
+Points d'Expérience (XP) : 
+
+Attributs Principaux
+
+Corps (COR) : %
+Esprit (ESP) : %
+Âme (ÂME) : %
+
+Statistiques Secondaires
+
+Points de Vie (PV) : / 
+Points de Mana (PM) : / 
+Initiative (INIT) : 
+Défense Physique (DEF) : 
+Défense Magique (DM) : 
+
+Compétences
+
+Listez vos compétences avec leur rang et le bonus correspondant.
+
+- Nom de la Compétence : Rang X (+Y%)
+- Nom de la Compétence : Rang X (+Y%)
+- Nom de la Compétence : Rang X (+Y%)
+- Nom de la Compétence : Rang X (+Y%)
+- Nom de la Compétence : Rang X (+Y%)
+
+Combat
+
+Armes
+
+- Arme 1 : 
+  - Type : (Légère, Moyenne, Lourde, Très Lourde)
+  - Dégâts : d100 / X
+  - Bonus : +Y%
+
+- Arme 2 : 
+  - Type : 
+  - Dégâts : 
+  - Bonus : 
+
+Armure et Protection
+
+- Armure : 
+  - Bonus Défense Physique : +X
+- Bouclier : 
+  - Bonus Défense Physique : +Y
+- Protection Magique : 
+  - Bonus Défense Magique : +Z
+
+Inventaire
+
+Listez les objets importants que votre personnage transporte.
+
+- 
+- 
+- 
+- 
+
+Histoire du Personnage
+
+Apparence : 
+Personnalité : 
+Histoire : 
+Objectifs : 
+
+Notes
+
+Prenez des notes sur votre aventure ici.
+
+
+

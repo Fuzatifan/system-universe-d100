@@ -1,0 +1,315 @@
+System Universe : Le Jeu de Rôle d100 (Version Accessible)
+
+Introduction
+
+Bienvenue dans System Universe : Le Jeu de Rôle, une adaptation de la célèbre série de romans LitRPG de SunriseCV. Ce jeu vous invite à plonger dans un univers post-apocalyptique où la Terre a été transformée par une mystérieuse "Intégration du Système". Les lois de la physique ont été réécrites, la faune et la flore sont devenues mortelles, et l'humanité doit lutter pour sa survie contre des monstres et de redoutables envahisseurs extraterrestres.
+
+Dans ce monde, chaque individu est régi par le "Système", une interface de jeu de rôle qui dicte les règles de la progression, des compétences et du combat. Vous incarnerez un survivant, un personnage doté de capacités uniques, qui devra se battre, explorer et évoluer pour se faire une place dans ce nouvel ordre mondial.
+
+Ce manuel utilise un système d100 simple et élégant, où tous les jets de dés utilisent des pourcentages faciles à comprendre et à calculer.
+
+Qu'est-ce qu'un Jeu de Rôle ?
+
+Un jeu de rôle (JDR) est un jeu de société coopératif dans lequel les joueurs incarnent des personnages dans un univers fictif. Un joueur, le Maître de Jeu (MJ), décrit le monde, les situations et les personnages non-joueurs (PNJ), tandis que les autres joueurs décrivent les actions de leurs personnages. Les résultats des actions sont déterminés par le dialogue et des lancers de dés à 100 faces.
+
+L'objectif est de créer une histoire interactive et passionnante ensemble. Il n'y a pas de gagnant ou de perdant ; l'important est de s'amuser et de vivre des aventures mémorables.
+
+Chapitre 1 : Le Système de Jeu d100
+
+Ce chapitre détaille les règles fondamentales qui régissent le jeu, basées entièrement sur le système de pourcentages.
+
+Attributs de Personnage
+
+Chaque personnage est défini par trois attributs principaux, exprimés en pourcentages :
+
+- Corps (COR) : Représente la force physique, l'endurance, l'agilité, les réflexes et la santé générale du personnage. Un score élevé indique un personnage robuste et apte au combat physique.
+- Esprit (ESP) : Mesure l'intelligence, la perception, la ruse, la volonté et les capacités d'analyse du personnage. Un score élevé est crucial pour les compétences techniques, la stratégie et la résistance mentale.
+- Âme (ÂME) : Jauge la force de caractère, le charisme, l'intuition et le potentiel magique du personnage. Un score élevé est indispensable pour utiliser la magie et interagir socialement.
+
+Statistiques Secondaires
+
+Les statistiques secondaires sont dérivées des attributs principaux et du niveau du personnage :
+
+- Points de Vie (PV) : Représentent la santé du personnage. Si les PV tombent à 0, le personnage est inconscient ou mort. La formule est : PV max = COR + (Niveau × 10).
+- Points de Mana (PM) : Représentent l'énergie magique du personnage, utilisée pour lancer des sorts et activer des compétences spéciales. La formule est : PM max = ÂME + (Niveau × 10).
+- Initiative (INIT) : Détermine l'ordre d'action en combat. La formule est : INIT = (ESP + COR) ÷ 2.
+- Défense Physique (DEF) : Réduit les dégâts physiques subis. La formule est : DEF = COR ÷ 2.
+- Défense Magique (DM) : Réduit les dégâts magiques subis. La formule est : DM = ÂME ÷ 2.
+
+Résolution d'Actions (Tests de Compétence)
+
+Toutes les actions dans System Universe utilisent le même mécanisme simple : Lancer 1d100 et obtenir un résultat inférieur ou égal à (Attribut + Bonus de Compétence + Modificateurs).
+
+Modificateurs de Difficulté
+
+- Très Facile : Modificateur de +30%. Exemple : Ouvrir une porte non verrouillée.
+- Facile : Modificateur de +20%. Exemple : Escalader un mur avec des prises.
+- Normale : Modificateur de +0%. Exemple : Crocheter une serrure standard.
+- Difficile : Modificateur de -20%. Exemple : Pirater un système sécurisé.
+- Très Difficile : Modificateur de -30%. Exemple : Désamorcer une bombe complexe.
+- Héroïque : Modificateur de -40%. Exemple : Accomplir l'impossible.
+
+Réussites et Échecs Critiques
+
+- Réussite Critique : Un jet de 1 à 5 est un succès spectaculaire avec bonus.
+- Réussite : Un jet inférieur ou égal au seuil est une action réussie normalement.
+- Échec : Un jet supérieur au seuil est une action échouée.
+- Échec Critique : Un jet de 96 à 100 est un échec catastrophique avec complications.
+
+Combat
+
+Le combat suit une structure organisée en tours et phases.
+
+Initiative
+
+Au début du combat, chaque participant lance 1d100 + son score d'Initiative. L'ordre d'action est déterminé du plus haut au plus bas.
+
+Actions de Combat
+
+Chaque tour, un personnage peut effectuer :
+- 1 Action principale : Attaquer, lancer un sort, utiliser une compétence complexe.
+- 1 Action de mouvement : Se déplacer, changer de position.
+- Actions libres illimitées : Parler, lâcher un objet, actions simples.
+
+Jets d'Attaque
+
+- Attaque au Corps à Corps : 1d100 ≤ COR + Bonus d'Arme + Modificateurs.
+- Attaque à Distance : 1d100 ≤ ESP + Bonus d'Arme + Modificateurs.
+
+Calcul des Dégâts
+
+Les dégâts dépendent du type d'arme utilisée :
+
+- Légère : d100 divisé par 10. Exemples : Couteau, matraque, pistolet léger.
+- Moyenne : d100 divisé par 5. Exemples : Épée, hache, pistolet standard.
+- Lourde : d100 divisé par 3. Exemples : Épée à deux mains, fusil d'assaut.
+- Très Lourde : d100 divisé par 2. Exemples : Lance-roquettes, arme de siège.
+
+Les dégâts finaux sont égaux aux dégâts de base moins la défense appropriée.
+
+Défense
+
+- Défense Physique : Réduit les dégâts d'armes physiques.
+- Défense Magique : Réduit les dégâts de sorts et capacités magiques.
+
+Progression et Expérience
+
+Gain d'Expérience
+
+Les personnages gagnent de l'expérience (XP) en :
+- Survivant à des combats difficiles.
+- Résolvant des problèmes complexes.
+- Accomplissant des objectifs d'histoire.
+- Faisant preuve de bon roleplay.
+
+Montée de Niveau
+
+L'XP requis pour le niveau suivant est égal au Niveau Actuel multiplié par 100.
+
+À chaque niveau, le personnage gagne :
+- +10 points d'attributs à distribuer librement entre COR, ESP, ÂME.
+- +1 rang de compétence dans une spécialisation de son choix.
+- Recalcul automatique des statistiques secondaires.
+
+Exemple de Progression
+
+Un personnage niveau 2 (200 XP) qui atteint 300 XP passe niveau 3 :
+- Il distribue 10 points (ex: +4 COR, +3 ESP, +3 ÂME).
+- Il améliore une compétence (ex: Combat Rapproché passe de Rang 1 à Rang 2).
+- Ses PV et PM augmentent de 10 chacun.
+
+Chapitre 2 : Création de Personnage
+
+Étape 1 : Répartition des Attributs
+
+Vous disposez de 150 points à répartir entre vos trois attributs. Chaque attribut doit avoir au minimum 20% et au maximum 80%.
+
+Exemples de répartitions :
+- Guerrier : COR 70%, ESP 40%, ÂME 40%.
+- Technicien : COR 40%, ESP 70%, ÂME 40%.
+- Mystique : COR 30%, ESP 45%, ÂME 75%.
+
+Étape 2 : Choix de la Classe
+
+Votre classe détermine vos compétences de départ et votre style de jeu.
+
+Guerrier
+- Spécialisation : Combat rapproché et protection d'équipe.
+- Compétences de départ : Combat Rapproché (Rang 1, +20% aux attaques au corps à corps), Résistance (Rang 1, +20% aux tests de résistance physique).
+- Équipement de départ : Épée ou hache (arme moyenne), Armure légère (+5 Défense Physique), Bouclier (+3 Défense Physique).
+
+Tireur d'Élite
+- Spécialisation : Combat à distance et reconnaissance.
+- Compétences de départ : Tir de Précision (Rang 1, +20% aux attaques à distance), Furtivité (Rang 1, +20% aux tests de discrétion).
+- Équipement de départ : Fusil de précision (arme lourde), Armure légère (+3 Défense Physique), Jumelles et équipement de survie.
+
+Technicien
+- Spécialisation : Technologie et support technique.
+- Compétences de départ : Piratage (Rang 1, +20% aux tests informatiques), Réparation (Rang 1, +20% aux tests de réparation).
+- Équipement de départ : Pistolet (arme moyenne), Ordinateur portable, Trousse d'outils et composants électroniques.
+
+Mystique
+- Spécialisation : Magie et soins.
+- Compétences de départ : Magie Élémentaire (Rang 1, +20% aux sorts d'attaque), Soins (Rang 1, +20% aux sorts de guérison).
+- Équipement de départ : Bâton magique (+2 aux jets de magie), Robe mystique (+5 Défense Magique), Composants magiques.
+
+Survivant
+- Spécialisation : Polyvalence et adaptation.
+- Compétences de départ : Survie (Rang 1, +20% aux tests de survie en milieu hostile), Athlétisme (Rang 1, +20% aux tests physiques).
+- Équipement de départ : Couteau de survie (arme légère), Équipement de camping, Rations et matériel de première nécessité.
+
+Étape 3 : Calcul des Statistiques
+
+Une fois vos attributs et classe choisis, calculez vos statistiques :
+
+- Points de Vie = COR + 10 (niveau 1).
+- Points de Mana = ÂME + 10 (niveau 1).
+- Initiative = (ESP + COR) ÷ 2.
+- Défense Physique = COR ÷ 2.
+- Défense Magique = ÂME ÷ 2.
+
+Étape 4 : Détails du Personnage
+
+Donnez vie à votre personnage en définissant :
+- Nom et âge.
+- Apparence physique.
+- Personnalité et motivations.
+- Histoire personnelle avant l'Intégration.
+- Objectifs dans ce nouveau monde.
+
+Chapitre 3 : Système de Compétences
+
+Rangs de Compétence
+
+Les compétences sont organisées en rangs qui donnent des bonus croissants :
+
+- Novice : Bonus de +0%.
+- Rang 1 : Bonus de +20%.
+- Rang 2 : Bonus de +30%.
+- Rang 3 : Bonus de +40%.
+- Rang 4 : Bonus de +50%.
+- Rang 5 : Bonus de +60%.
+
+Compétences par Catégorie
+
+Combat
+- Combat Rapproché : Attaques au corps à corps.
+- Tir de Précision : Attaques à distance.
+- Défense : Parade et esquive.
+- Tactique : Stratégie de combat.
+
+Physique
+- Athlétisme : Course, saut, escalade.
+- Furtivité : Discrétion et infiltration.
+- Survie : Orientation, chasse, résistance aux éléments.
+- Résistance : Endurance et récupération.
+
+Mental
+- Piratage : Informatique et systèmes électroniques.
+- Investigation : Recherche d'indices et déduction.
+- Médecine : Premiers soins et chirurgie.
+- Sciences : Connaissances techniques et théoriques.
+
+Social
+- Persuasion : Convaincre et négocier.
+- Intimidation : Menacer et impressionner.
+- Tromperie : Mentir et manipuler.
+- Leadership : Commander et inspirer.
+
+Magique
+- Magie Élémentaire : Sorts d'attaque (feu, glace, foudre).
+- Magie de Guérison : Soins et restauration.
+- Magie de Protection : Boucliers et enchantements défensifs.
+- Invocation : Appel de créatures et d'esprits.
+
+Chapitre 4 : Guide du Maître de Jeu
+
+Rôle du MJ
+
+Le MJ est le conteur, l'arbitre et le metteur en scène. Votre rôle est de :
+- Décrire l'univers de manière vivante et immersive.
+- Incarner les PNJ de manière crédible.
+- Présenter des défis intéressants et équilibrés.
+- Adapter l'histoire aux actions des joueurs.
+- Assurer le respect des règles et le bon déroulement du jeu.
+
+Créer une Aventure
+
+Une bonne aventure comprend :
+- Un objectif clair : Que doivent accomplir les personnages ?
+- Des obstacles variés : Combats, énigmes, interactions sociales.
+- Des PNJ mémorables : Alliés, ennemis, personnages neutres.
+- Des lieux intéressants : Villes en ruines, laboratoires secrets, paysages mutants.
+- Une récompense significative : Expérience, équipement, informations.
+
+Gérer l'Accessibilité
+
+Pour une expérience optimale avec des joueurs aveugles ou malvoyants :
+- Décrivez les scènes en utilisant tous les sens (sons, odeurs, textures).
+- Annoncez clairement les résultats des jets de dés.
+- Utilisez le lanceur de dés accessible pour des résultats vocaux.
+- Fournissez des descriptions textuelles des cartes et des images.
+- Soyez patient et prêt à répéter les informations.
+
+Chapitre 5 : Scénario d'Introduction - "L'Avant-Poste Oublié"
+
+Synopsis
+
+Les personnages sont contactés par une survivante nommée Elara. Elle leur demande de l'aide pour retrouver son frère, Léo, qui a disparu près d'un ancien avant-poste militaire. L'avant-poste est réputé pour abriter des technologies précieuses, mais aussi des créatures mutantes dangereuses.
+
+Acte 1 : La Rencontre
+
+Les personnages rencontrent Elara dans un camp de survivants. Elle leur explique la situation et leur promet une récompense généreuse. Elle leur donne une carte approximative de la région.
+
+Acte 2 : La Piste
+
+Les personnages suivent la piste de Léo à travers des terres sauvages. Ils doivent surmonter des obstacles naturels et affronter des créatures mutantes de bas niveau.
+
+Acte 3 : L'Avant-Poste
+
+Les personnages atteignent l'avant-poste, un complexe en ruines. Ils doivent explorer les bâtiments, éviter les pièges et résoudre une énigme simple pour accéder au laboratoire principal.
+
+Acte 4 : Le Laboratoire
+
+Dans le laboratoire, ils découvrent que Léo a été capturé par un groupe de pillards. Ils doivent affronter les pillards et leur chef, un guerrier brutal nommé Roric.
+
+Acte 5 : Le Sauvetage
+
+Après avoir vaincu Roric, les personnages libèrent Léo. Il leur révèle que les pillards cherchaient un artefact puissant caché dans le laboratoire. Les personnages doivent décider quoi faire de l'artefact.
+
+Conclusion
+
+Les personnages retournent au camp avec Léo et l'artefact. Elara les récompense et leur propose de rejoindre sa faction, l'Ordre de l'Équilibre. Cette décision marquera le début de leurs aventures dans la campagne "Les Échos du Système".
+
+Chapitre 6 : Bestiaire
+
+Rat-Garou
+- Description : Créature mutante agressive de la taille d'un gros chien.
+- Attributs : COR 50, ESP 30, ÂME 20.
+- Compétences : Morsure (d100/5), Griffes (d100/10).
+- Tactique : Attaque en meute.
+
+Drone de Sécurité Défectueux
+- Description : Robot de sécurité endommagé mais toujours fonctionnel.
+- Attributs : COR 40, ESP 60, ÂME 10.
+- Compétences : Laser (d100/5), Taser (paralyse sur réussite critique).
+- Tactique : Attaque à distance en priorité.
+
+Pillard
+- Description : Survivant humain hostile.
+- Attributs : COR 55, ESP 45, ÂME 40.
+- Compétences : Hache (d100/5), Pistolet (d100/5).
+- Tactique : Utilise la couverture et les embuscades.
+
+Conclusion
+
+Ce manuel vous a fourni toutes les clés pour commencer à jouer à System Universe. Le plus important est de vous amuser, d'être créatif et de construire des histoires mémorables ensemble. Bonne chance, survivants ! Que le Système vous soit favorable.
+
+---
+
+Crédits
+- Création : Manus AI
+- Univers Original : SunriseCV
+- Adaptation et Accessibilité : Manus AI
+- Remerciements : La communauté des joueurs de rôle accessibles.
+

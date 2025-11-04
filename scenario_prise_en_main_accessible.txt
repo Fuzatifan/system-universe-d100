@@ -1,0 +1,315 @@
+SCÉNARIO DE PRISE EN MAIN : PREMIERS PAS DANS LE SYSTÈME
+
+Système de jeu : System Universe d100
+Durée : 2 à 3 heures
+Joueurs : 2 à 4 joueurs
+Niveaux : Niveau 1 (personnages débutants)
+Auteur : Manus AI
+
+═══════════════════════════════════════════════════════════════════
+
+INTRODUCTION
+
+Ce scénario de prise en main permet aux joueurs de découvrir l'univers de System Universe à travers une aventure courte mais intense. Les personnages sont les mêmes que ceux qui apparaîtront dans la grande campagne "Les Échos du Système", permettant aux joueurs de se familiariser avec leurs capacités avant de se lancer dans l'épopée principale.
+
+Synopsis : Les personnages font partie d'un petit groupe de survivants qui vient de découvrir qu'ils possèdent des capacités inhabituelles depuis l'Intégration du Système. Alors qu'ils explorent les ruines d'une ancienne station de recherche, ils découvrent les premiers indices d'un mystère bien plus vaste qui les mènera vers leur destinée de Résonants.
+
+═══════════════════════════════════════════════════════════════════
+
+LES PERSONNAGES
+
+Les joueurs incarnent des membres de l'Avant-Poste Aurore, une petite communauté de survivants établie dans les ruines d'une ville côtière. Chacun a récemment découvert qu'il possédait des capacités étranges liées au Système.
+
+───────────────────────────────────────────────────────────────────
+
+ALEX "TANK" MORRISON - LE PROTECTEUR
+
+Classe : Guerrier
+Niveau : 1
+Attributs : Corps soixante-cinq pour cent, Esprit quarante-cinq pour cent, Âme quarante pour cent
+
+Background : Alex était pompier avant l'Intégration. Depuis quelques semaines, il remarque que sa force et sa résistance ont considérablement augmenté. Il peut soulever des charges qu'il ne pourrait normalement pas bouger, et les blessures qui devraient le mettre hors de combat guérissent étonnamment vite. Il ressent une connexion étrange avec le Système, comme si celui-ci répondait à sa volonté de protéger les autres.
+
+Compétences :
+- Combat au Corps à Corps, Rang 1, bonus de vingt pour cent
+- Athlétisme, Rang 1, bonus de vingt pour cent
+- Protection, Rang 1, bonus de vingt pour cent
+
+Équipement : Hache de pompier (arme moyenne, dégâts égaux au résultat du dé 100 divisé par 5), armure improvisée (bonus de dix pour cent en défense), trousse de premiers soins
+
+Personnalité : Protecteur, loyal, pragmatique. Alex place toujours la sécurité du groupe avant la sienne.
+
+───────────────────────────────────────────────────────────────────
+
+SAM "EAGLE EYE" RODRIGUEZ - L'OBSERVATEUR
+
+Classe : Tireur d'Élite
+Niveau : 1
+Attributs : Corps cinquante pour cent, Esprit soixante pour cent, Âme quarante pour cent
+
+Background : Sam était photographe animalier avant l'Intégration. Depuis l'apparition du Système, sa perception s'est aiguisée de manière surnaturelle. Il peut voir des détails à des distances impossibles, anticiper les mouvements de ses adversaires, et ses tirs atteignent des cibles qu'il ne devrait même pas pouvoir voir. Le Système semble amplifier sa capacité naturelle d'observation.
+
+Compétences :
+- Tir à Distance, Rang 1, bonus de vingt pour cent
+- Perception, Rang 1, bonus de vingt pour cent
+- Survie, Rang 1, bonus de vingt pour cent
+
+Équipement : Fusil de chasse (arme lourde, dégâts égaux au résultat du dé 100 divisé par 3), jumelles, kit de survie
+
+Personnalité : Analytique, patient, observateur. Sam préfère évaluer une situation avant d'agir.
+
+───────────────────────────────────────────────────────────────────
+
+RILEY "TECH" KIM - L'INGÉNIEUR
+
+Classe : Technicien
+Niveau : 1
+Attributs : Corps quarante pour cent, Esprit soixante-dix pour cent, Âme quarante pour cent
+
+Background : Riley était ingénieur en robotique avant l'Intégration. Depuis quelques semaines, il peut comprendre intuitivement le fonctionnement de n'importe quelle technologie, même celle créée par le Système. Ses doigts semblent danser sur les interfaces, et il peut réparer ou pirater des systèmes en quelques secondes. Le Système lui murmure les secrets de la technologie.
+
+Compétences :
+- Technologie, Rang 2, bonus de trente pour cent
+- Piratage, Rang 1, bonus de vingt pour cent
+- Fabrication, Rang 1, bonus de vingt pour cent
+
+Équipement : Pistolet laser improvisé (arme moyenne, dégâts égaux au résultat du dé 100 divisé par 5), kit d'outils, scanner portable
+
+Personnalité : Curieux, inventif, enthousiaste. Riley voit chaque problème comme un puzzle à résoudre.
+
+───────────────────────────────────────────────────────────────────
+
+JORDAN "MYSTIC" OKAFOR - LE SAGE
+
+Classe : Mystique
+Niveau : 1
+Attributs : Corps quarante pour cent, Esprit cinquante pour cent, Âme soixante pour cent
+
+Background : Jordan était professeur de philosophie avant l'Intégration. Depuis l'apparition du Système, il ressent une connexion profonde avec l'énergie qui imprègne le monde. Il peut canaliser cette énergie pour soigner les blessures, créer des barrières protectrices, ou même influencer les émotions des autres. Le Système résonne avec son âme d'une manière qu'il ne comprend pas encore totalement.
+
+Compétences :
+- Magie Mystique, Rang 1, bonus de vingt pour cent
+- Soins, Rang 1, bonus de vingt pour cent
+- Empathie, Rang 1, bonus de vingt pour cent
+
+Équipement : Bâton de marche (arme légère, dégâts égaux au résultat du dé 100 divisé par 10), cristaux de focalisation, herbes médicinales
+
+Personnalité : Sage, empathique, réfléchi. Jordan cherche à comprendre le sens profond des événements.
+
+═══════════════════════════════════════════════════════════════════
+
+ACTE I : L'APPEL DU SIGNAL
+
+MISE EN SCÈNE
+
+Les personnages se trouvent dans la salle commune de l'Avant-Poste Aurore, un ancien centre communautaire reconverti en refuge. La nuit tombe sur les ruines de la ville. Depuis quelques jours, Riley capte un signal étrange provenant de l'ancienne Station de Recherche Nexus, située à quelques kilomètres de là. Le signal semble être un message codé, répétant sans cesse la même séquence.
+
+Ambiance : La salle est éclairée par des lanternes à LED. On entend le vent siffler à travers les fenêtres brisées. L'atmosphère est tendue car les réserves de nourriture diminuent et plusieurs membres de la communauté sont tombés malades d'une fièvre mystérieuse.
+
+───────────────────────────────────────────────────────────────────
+
+SCÈNE 1 : LA DÉCISION
+
+Riley présente ses découvertes au groupe. Il a réussi à décoder une partie du message : "Résonants... venez... espoir... guérison...". Le signal provient du niveau souterrain de la Station Nexus, une installation que tout le monde croyait détruite lors de l'Intégration.
+
+Enjeu : Faut-il risquer une expédition vers la Station Nexus ? Le signal pourrait être un piège, mais il mentionne une possible guérison pour les malades de l'Avant-Poste.
+
+Test de Compétence : Jordan peut faire un test d'Empathie. Calcul : Esprit cinquante pour cent plus Empathie bonus vingt pour cent égale soixante-dix pour cent. Lancez le dé 100. Si le résultat est inférieur ou égal à soixante-dix, le test est réussi. Un succès révèle que le signal ne semble pas hostile, mais qu'il y a une urgence.
+
+Décision : Les personnages décident de partir à l'aube, équipés de ce qu'ils peuvent trouver dans l'Avant-Poste.
+
+───────────────────────────────────────────────────────────────────
+
+SCÈNE 2 : LE VOYAGE
+
+Le trajet vers la Station Nexus traverse les ruines de l'ancienne zone industrielle. Le paysage est désolé : bâtiments effondrés, véhicules abandonnés, végétation mutée qui pousse à travers l'asphalte fissuré. Le Système a transformé ce monde au-delà de toute reconnaissance.
+
+RENCONTRE 1 : LES RÔDEURS MUTÉS
+
+Alors que les personnages traversent une rue encombrée de débris, Sam peut repérer un mouvement suspect dans les ombres. Test de Perception : Esprit soixante pour cent plus Perception bonus vingt pour cent égale quatre-vingts pour cent. Si le test réussit, Sam repère trois Rôdeurs Mutés, d'anciens humains transformés par le Système en créatures agressives, qui se préparent à attaquer.
+
+Statistiques des Rôdeurs Mutés :
+- Points de Vie : trente chacun
+- Attaque : Corps quarante pour cent (griffes, dégâts égaux au dé 100 divisé par 10)
+- Défense : Corps quarante pour cent
+- Particularité : Attaquent en meute, bonus de dix pour cent si un allié est adjacent
+
+Combat : Les Rôdeurs attaquent par surprise si Sam ne les a pas repérés. Alex peut se placer en avant pour protéger le groupe, Sam peut les abattre à distance, Riley peut utiliser son pistolet laser, et Jordan peut soigner les blessés ou affaiblir les ennemis avec sa magie.
+
+Conseil MJ : Ce premier combat doit permettre aux joueurs de comprendre les mécaniques de base. Décrivez les actions de manière cinématographique pour créer de l'immersion.
+
+Récompense : Après le combat, les personnages gagnent cinquante points d'expérience chacun. Riley peut récupérer des composants technologiques sur les corps des Rôdeurs, valeur cent crédits.
+
+═══════════════════════════════════════════════════════════════════
+
+ACTE II : LA STATION NEXUS
+
+MISE EN SCÈNE
+
+La Station de Recherche Nexus se dresse devant les personnages comme un monument à la science d'avant l'Intégration. Le bâtiment principal est partiellement effondré, mais l'entrée du niveau souterrain est encore accessible. Des symboles étranges brillent faiblement sur les murs, des glyphes du Système que personne ne comprend vraiment.
+
+Ambiance : L'air est chargé d'électricité statique. Les personnages ressentent une présence, comme si le Système lui-même les observait. Le signal de Riley devient plus fort à mesure qu'ils s'approchent.
+
+───────────────────────────────────────────────────────────────────
+
+SCÈNE 3 : L'ENTRÉE
+
+L'entrée du niveau souterrain est bloquée par une porte de sécurité électronique. Le système d'alimentation fonctionne encore, alimenté par une source d'énergie inconnue. Un panneau de contrôle clignote faiblement.
+
+Test de Compétence : Riley peut tenter de pirater la porte. Calcul : Esprit soixante-dix pour cent plus Piratage bonus vingt pour cent égale quatre-vingt-dix pour cent. Un succès ouvre la porte sans déclencher d'alarme. Un échec déclenche un système de sécurité qui libère un Drone de Défense.
+
+Alternative : Alex peut forcer la porte. Calcul : Corps soixante-cinq pour cent plus Athlétisme bonus vingt pour cent égale quatre-vingt-cinq pour cent. Difficulté Difficile, malus de vingt pour cent, résultat final soixante-cinq pour cent. Forcer la porte fait du bruit et alerte les créatures à l'intérieur.
+
+───────────────────────────────────────────────────────────────────
+
+SCÈNE 4 : LE LABORATOIRE
+
+Le niveau souterrain est un dédale de couloirs et de laboratoires. Les murs sont couverts de notes et de schémas incompréhensibles. Des équipements scientifiques jonchent le sol. Le signal de Riley provient d'une salle au fond du complexe.
+
+RENCONTRE 2 : LES DRONES DE DÉFENSE
+
+Deux Drones de Défense, des machines sphériques flottantes équipées de lasers, patrouillent dans les couloirs. Ils attaquent tout intrus qui ne possède pas l'autorisation appropriée.
+
+Statistiques des Drones de Défense :
+- Points de Vie : quarante chacun
+- Attaque : Laser, Esprit cinquante pour cent, arme moyenne, dégâts égaux au dé 100 divisé par 5
+- Défense : Blindage soixante pour cent
+- Particularité : Volent, difficiles à toucher au corps à corps, malus de vingt pour cent pour les attaques de mêlée
+
+Tactique : Sam peut les abattre efficacement à distance. Riley peut tenter de les pirater. Calcul : Esprit soixante-dix pour cent plus Piratage bonus vingt pour cent égale quatre-vingt-dix pour cent. Difficulté Héroïque, malus de quarante pour cent, résultat final cinquante pour cent. Un succès permet de les désactiver ou de les retourner contre d'autres ennemis. Jordan peut créer une barrière mystique pour protéger le groupe.
+
+Récompense : Soixante-quinze points d'expérience chacun. Les drones contiennent des cellules d'énergie, valeur deux cents crédits, et des composants de haute technologie.
+
+───────────────────────────────────────────────────────────────────
+
+SCÈNE 5 : LA SALLE DU SIGNAL
+
+Au fond du complexe se trouve une grande salle circulaire. Au centre, une capsule de stase contient une femme inconsciente. Des câbles la relient à un ordinateur central qui émet le signal capté par Riley. Sur les murs, des écrans affichent des données incompréhensibles et des images de l'univers.
+
+Révélation : La femme dans la capsule est le Docteur Elena Vasquez, une scientifique qui travaillait sur le Système avant l'Intégration. Elle est dans un état de stase induite, maintenue en vie par la technologie du Système. L'ordinateur central contient ses notes de recherche.
+
+Test de Compétence : Riley peut accéder aux fichiers de l'ordinateur. Calcul : Esprit soixante-dix pour cent plus Technologie bonus trente pour cent égale cent pour cent. Succès automatique. Il découvre que le Docteur Vasquez étudiait les "Résonants", des humains capables d'interagir directement avec le Système. Elle a créé un sérum qui pourrait guérir les maladies liées au Système, mais elle n'a jamais pu le tester.
+
+Choix Moral : Faut-il réveiller le Docteur Vasquez ? Le processus est risqué et pourrait la tuer. Faut-il prendre le sérum sans son consentement ? Les personnages doivent décider.
+
+═══════════════════════════════════════════════════════════════════
+
+ACTE III : LE RÉVEIL
+
+SCÈNE 6 : LA DÉCISION
+
+Si les personnages décident de réveiller le Docteur Vasquez, Jordan peut utiliser sa magie pour stabiliser le processus. Calcul : Âme soixante pour cent plus Soins bonus vingt pour cent égale quatre-vingts pour cent. Un succès permet un réveil en douceur. Un échec critique pourrait causer des complications.
+
+Le Réveil : Le Docteur Vasquez se réveille lentement. Elle est désorientée mais reconnaissante. Elle explique qu'elle s'est placée en stase pour survivre à une attaque de créatures du Système qui ont envahi la station. Elle confirme que les personnages sont des Résonants, des individus rares capables de façonner le Système plutôt que d'être façonnés par lui.
+
+Information Clé : Le Docteur Vasquez révèle que le sérum qu'elle a créé peut guérir les maladies causées par l'exposition au Système, mais qu'il nécessite un ingrédient rare : un Fragment de Résonance, un cristal formé par l'énergie du Système. Elle sait où en trouver un, mais c'est gardé par une créature dangereuse.
+
+───────────────────────────────────────────────────────────────────
+
+SCÈNE 7 : LE GARDIEN
+
+Le Docteur Vasquez guide les personnages vers une salle adjacente où se trouve un Fragment de Résonance, un cristal bleu lumineux qui pulse d'énergie. Mais le fragment est gardé par un Gardien de Fragments, une créature biomécanique créée par le Système pour protéger les objets de valeur.
+
+Statistiques du Gardien de Fragments :
+- Points de Vie : cent
+- Attaque : Tentacules énergétiques, Corps soixante pour cent, arme lourde, dégâts égaux au dé 100 divisé par 3
+- Défense : Carapace blindée soixante-dix pour cent
+- Particularités :
+  * Régénération : Récupère dix Points de Vie par tour
+  * Bouclier énergétique : Peut créer un bouclier qui absorbe cinquante points de dégâts, une fois par combat
+  * Faiblesse : Vulnérable aux attaques technologiques, malus de vingt pour cent en défense contre les armes laser
+
+Combat Épique : Ce combat final doit être intense et nécessiter la coopération de tout le groupe.
+
+Tactiques :
+- Alex peut attirer l'attention du Gardien et absorber ses attaques pour protéger les autres.
+- Sam peut viser les points faibles de la créature pour maximiser les dégâts.
+- Riley peut pirater les systèmes du Gardien pour désactiver temporairement sa régénération ou son bouclier. Calcul : Esprit soixante-dix pour cent plus Piratage bonus vingt pour cent égale quatre-vingt-dix pour cent. Difficulté Très Difficile, malus de trente pour cent, résultat final soixante pour cent.
+- Jordan peut soigner les blessés et affaiblir le Gardien avec sa magie.
+
+Tactique Recommandée : Riley devrait pirater le Gardien en premier pour désactiver sa régénération. Ensuite, Sam et Alex peuvent concentrer leurs attaques pendant que Jordan maintient le groupe en vie.
+
+Récompense : Cent cinquante points d'expérience chacun. Le Fragment de Résonance, objet de quête. Le Gardien laisse tomber des composants de haute valeur, cinq cents crédits, et une Arme Énergétique Expérimentale, arme lourde, dégâts égaux au dé 100 divisé par 2, utilisable par Alex.
+
+═══════════════════════════════════════════════════════════════════
+
+ÉPILOGUE : LE RETOUR
+
+SCÈNE 8 : LA GUÉRISON
+
+De retour à l'Avant-Poste Aurore, le Docteur Vasquez utilise le Fragment de Résonance pour créer le sérum de guérison. Elle administre le traitement aux malades, qui commencent à se rétablir rapidement. La communauté célèbre le retour des héros et l'arrivée d'une scientifique qui comprend le Système.
+
+Révélation Finale : Le Docteur Vasquez révèle aux personnages qu'ils ne sont pas les seuls Résonants. Elle a détecté d'autres signatures similaires à travers le monde. Elle mentionne trois groupes qui semblent avoir des objectifs différents : l'Ordre de l'Équilibre, les Libres, et les Architectes. Elle ne sait pas encore ce qu'ils veulent, mais elle pressent que les Résonants joueront un rôle crucial dans l'avenir de l'humanité.
+
+Accroche pour la Campagne : Le Docteur Vasquez propose aux personnages de l'aider à en apprendre davantage sur les Résonants et sur le Système. Elle a des indices sur l'emplacement d'autres Fragments de Résonance et d'anciennes installations qui pourraient contenir des réponses. C'est le début de leur voyage vers la campagne "Les Échos du Système".
+
+═══════════════════════════════════════════════════════════════════
+
+PROGRESSION ET RÉCOMPENSES
+
+EXPÉRIENCE TOTALE
+- Combat contre les Rôdeurs Mutés : cinquante points d'expérience
+- Combat contre les Drones de Défense : soixante-quinze points d'expérience
+- Combat contre le Gardien de Fragments : cent cinquante points d'expérience
+- Objectif accompli, sauver les malades : cent points d'expérience
+- Total : trois cent soixante-quinze points d'expérience par personnage
+
+Montée de Niveau : Avec trois cent soixante-quinze points d'expérience, les personnages atteignent le niveau 2. Ils gagnent dix points d'attributs supplémentaires à répartir librement et peuvent augmenter un rang de compétence ou en apprendre une nouvelle.
+
+TRÉSORS ET ÉQUIPEMENT
+- Composants technologiques : huit cents crédits au total
+- Arme Énergétique Expérimentale pour Alex
+- Fragment de Résonance, utilisé pour le sérum, mais le Docteur Vasquez peut en créer d'autres
+- Accès aux connaissances du Docteur Vasquez sur le Système
+
+═══════════════════════════════════════════════════════════════════
+
+CONSEILS POUR LE MAÎTRE DE JEU
+
+ACCESSIBILITÉ
+
+Ce scénario est conçu pour être accessible aux joueurs aveugles et malvoyants. Privilégiez les descriptions auditives, tactiles et olfactives :
+
+Sons : Le bourdonnement des drones, le craquement des tentacules du Gardien, le sifflement du vent dans les ruines
+
+Textures : La surface froide et lisse de la capsule de stase, la rugosité des murs de béton, la chaleur pulsante du Fragment de Résonance
+
+Odeurs : L'odeur de métal rouillé dans les ruines, le parfum d'ozone des équipements électroniques, l'odeur de moisi dans les laboratoires abandonnés
+
+RYTHME
+- Acte I : trente à quarante-cinq minutes, introduction et premier combat
+- Acte II : soixante à quatre-vingt-dix minutes, exploration et combats
+- Acte III : trente à quarante-cinq minutes, combat final et épilogue
+
+ADAPTATION
+- Pour deux joueurs : Réduisez le nombre d'ennemis, deux Rôdeurs, un Drone, Gardien avec quatre-vingts Points de Vie
+- Pour quatre joueurs : Utilisez les statistiques standard
+- Difficulté : Ajustez les Points de Vie des ennemis selon l'expérience des joueurs
+
+IMMERSION
+- Utilisez la musique d'ambiance "L'Univers des Systèmes" pendant les moments clés
+- Encouragez les joueurs à décrire leurs actions de manière cinématographique
+- Récompensez la créativité et le roleplay avec des bonus de dix pour cent aux tests
+
+═══════════════════════════════════════════════════════════════════
+
+CONNEXION AVEC LA CAMPAGNE
+
+Ce scénario sert d'introduction à la campagne "Les Échos du Système". Les personnages ont maintenant :
+
+1. Découvert leur nature de Résonants : Ils savent qu'ils sont spéciaux et peuvent influencer le Système
+
+2. Rencontré le Docteur Elena Vasquez : Une alliée précieuse qui deviendra un personnage non-joueur récurrent dans la campagne
+
+3. Obtenu leur premier Fragment de Résonance : Un objet qui jouera un rôle central dans la campagne
+
+4. Entendu parler des trois factions : L'Ordre de l'Équilibre, les Libres, et les Architectes
+
+Les joueurs sont maintenant prêts à plonger dans la grande aventure de "Les Échos du Système", où ils découvriront les secrets du Système et détermineront le destin de l'humanité.
+
+═══════════════════════════════════════════════════════════════════
+
+FIN DU SCÉNARIO DE PRISE EN MAIN
+
+Bonne aventure dans l'univers de System Universe d100 !
+

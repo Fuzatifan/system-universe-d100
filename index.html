@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="System Universe d100 - Jeu de rôle post-apocalyptique accessible. Lanceur de dés intégré, règles complètes, personnages pré-tirés.">
+    <meta name="keywords" content="jeu de rôle, RPG, d100, System Universe, accessible, aveugles, post-apocalyptique">
+    <title>System Universe d100 - Jeu de Rôle Accessible</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Bannière -->
+    <header class="banner">
+        <div class="banner-content">
+            <img src="logo-system-universe.png" alt="Logo System Universe d100" class="logo">
+            <div class="banner-text">
+                <h1>System Universe d100</h1>
+                <p>Jeu de Rôle Accessible</p>
+            </div>
+            <div class="music-player">
+                <iframe 
+                    src="https://suno.com/embed/VIzej3Tlx26dpnBJ" 
+                    width="300" 
+                    height="80" 
+                    frameborder="0" 
+                    title="L'Univers des Systèmes - Musique officielle">
+                </iframe>
+            </div>
+        </div>
+        <span class="version-badge">Version UTF-8</span>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+        <button class="nav-button active" data-tab="accueil">Accueil</button>
+        <button class="nav-button" data-tab="lanceur">Lanceur de Dés</button>
+        <button class="nav-button" data-tab="campagne">Campagne</button>
+        <button class="nav-button" data-tab="telechargements">Téléchargements</button>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main class="main-content">
+        <!-- Onglet Accueil -->
+        <section id="accueil" class="tab-content active">
+            <h2>Bienvenue dans System Universe d100</h2>
+            <p>Un jeu de rôle post-apocalyptique où l'humanité doit s'adapter à un monde transformé par le "Système" - une force mystérieuse qui a réécrit les lois de la réalité.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🎲 Système d100 Simple</h3>
+                    <p>Un seul type de dé pour toutes les actions. Lancez d100 et comparez au seuil de réussite.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>♿ 100% Accessible</h3>
+                    <p>Conçu pour les personnes aveugles avec synthèse vocale, navigation clavier et lecteurs d'écran.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 Contenu Riche</h3>
+                    <p>Manuel complet, campagne épique, personnages pré-tirés et lanceur de dés intégré.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Onglet Lanceur de Dés -->
+        <section id="lanceur" class="tab-content">
+            <h2>Lanceur de Dés d100</h2>
+            <div class="dice-launcher">
+                <button id="launchDice" class="dice-button">Lancer d100</button>
+                <div id="diceResult" class="dice-result"></div>
+                <div id="diceHistory" class="dice-history">
+                    <h3>Historique des Lancers</h3>
+                    <ul id="historyList"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Onglet Campagne -->
+        <section id="campagne" class="tab-content">
+            <h2>Campagne "Les Échos du Système"</h2>
+            <p>Une campagne épique en 6 actes pour 18-24 sessions de jeu, emmenant les personnages du niveau 1 au niveau 10.</p>
+            
+            <div class="campaign-info">
+                <h3>Synopsis</h3>
+                <p>Les personnages découvrent qu'ils sont des "Résonants" - des humains capables d'influencer le Système lui-même. Ils devront naviguer entre trois factions aux visions opposées pour l'avenir de l'humanité.</p>
+                
+                <h3>Les 3 Factions</h3>
+                <div class="factions">
+                    <div class="faction-card faction-equilibre">
+                        <h4>L'Ordre de l'Équilibre</h4>
+                        <p>Veut "purifier" le Système et restaurer l'ancien monde.</p>
+                    </div>
+                    <div class="faction-card faction-libres">
+                        <h4>Les Libres</h4>
+                        <p>Prône l'évolution naturelle et l'adaptation au nouveau monde.</p>
+                    </div>
+                    <div class="faction-card faction-architectes">
+                        <h4>Les Architectes</h4>
+                        <p>Créateurs originaux du Système avec un plan secret.</p>
+                    </div>
+                </div>
+                
+                <h3>Structure de la Campagne</h3>
+                <ul class="campaign-acts">
+                    <li><strong>Acte 1 :</strong> L'Éveil des Anomalies (Niveaux 1-2)</li>
+                    <li><strong>Acte 2 :</strong> Les Fragments Perdus (Niveaux 2-3)</li>
+                    <li><strong>Acte 3 :</strong> La Guerre des Codes (Niveaux 4-5)</li>
+                    <li><strong>Acte 4 :</strong> Les Échos du Passé (Niveaux 5-6)</li>
+                    <li><strong>Acte 5 :</strong> La Convergence (Niveaux 7-8)</li>
+                    <li><strong>Acte 6 :</strong> L'Aube Nouvelle (Niveaux 9-10)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Onglet Téléchargements -->
+        <section id="telechargements" class="tab-content">
+            <h2>Téléchargements</h2>
+            <p>Tous les fichiers nécessaires pour jouer à System Universe d100. Version UTF-8 corrigée pour un affichage parfait des caractères français.</p>
+            
+            <div class="downloads-grid">
+                <!-- Documents PDF Originaux -->
+                <div class="download-card">
+                    <div class="download-icon">📖</div>
+                    <h3>Manuel de Jeu Complet</h3>
+                    <p class="download-size">350 KB</p>
+                    <p>Règles complètes du système d100, création de personnages, magie et bestiaire</p>
+                    <a href="System_Universe_JDR_Manuel_d100_UTF8.pdf" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">📋</div>
+                    <h3>Fiche de Personnage</h3>
+                    <p class="download-size">300 KB</p>
+                    <p>Template vierge pour créer vos personnages avec toutes les statistiques</p>
+                    <a href="Fiche_Personnage_d100_UTF8.pdf" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">🎯</div>
+                    <h3>Aide-Mémoire MJ</h3>
+                    <p class="download-size">320 KB</p>
+                    <p>Référence rapide pour le Maître de Jeu avec toutes les tables importantes</p>
+                    <a href="Aide_Memoire_MJ_d100_UTF8.pdf" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">📚</div>
+                    <h3>Campagne "Les Échos du Système"</h3>
+                    <p class="download-size">450 KB</p>
+                    <p>Campagne épique en 6 actes pour 18-24 sessions de jeu (Niveaux 1-10)</p>
+                    <a href="Campagne_System_Universe_d100_Les_Echos_du_Systeme.pdf" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">🎲</div>
+                    <h3>Aides de Jeu Campagne</h3>
+                    <p class="download-size">280 KB</p>
+                    <p>Cartes de factions, tables de résonance et conseils d'accessibilité pour MJ</p>
+                    <a href="Aides_de_Jeu_Campagne_System_Universe.pdf" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-icon">🔊</div>
+                    <h3>Lanceur de Dés Accessible</h3>
+                    <p class="download-size">15 KB</p>
+                    <p>Application Python avec synthèse vocale pour personnes aveugles</p>
+                    <a href="lanceur_des_accessible.py" class="download-button" download>Télécharger</a>
+                </div>
+
+                <!-- Nouveaux Documents Accessibles (.txt) -->
+                <div class="download-card accessible">
+                    <div class="download-icon">♿📖</div>
+                    <h3>Manuel Accessible (TXT)</h3>
+                    <p class="download-size">25 KB</p>
+                    <p>Version texte pur du manuel, parfaitement lisible par les lecteurs d'écran</p>
+                    <a href="manuel_accessible.txt" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card accessible">
+                    <div class="download-icon">♿📋</div>
+                    <h3>Fiche Personnage Accessible (TXT)</h3>
+                    <p class="download-size">2 KB</p>
+                    <p>Fiche de personnage en texte pur, optimisée pour l'accessibilité</p>
+                    <a href="fiche_personnage_accessible.txt" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card accessible">
+                    <div class="download-icon">♿🎯</div>
+                    <h3>Aide-Mémoire MJ Accessible (TXT)</h3>
+                    <p class="download-size">3 KB</p>
+                    <p>Référence rapide MJ en texte pur, compatible lecteurs d'écran</p>
+                    <a href="aide_memoire_mj_accessible.txt" class="download-button" download>Télécharger</a>
+                </div>
+
+                <!-- Scénario de Prise en Main -->
+                <div class="download-card">
+                    <div class="download-icon">🎬</div>
+                    <h3>Scénario de Prise en Main</h3>
+                    <p class="download-size">341 KB</p>
+                    <p>Aventure d'introduction de 2-3h utilisant les personnages de la campagne</p>
+                    <a href="Scenario_Prise_en_Main_System_Universe.pdf" class="download-button" download>Télécharger</a>
+                </div>
+
+                <div class="download-card accessible">
+                    <div class="download-icon">♿🎬</div>
+                    <h3>Scénario de Prise en Main Accessible (TXT)</h3>
+                    <p class="download-size">24 KB</p>
+                    <p>Version texte pur du scénario d'introduction, optimisée pour les lecteurs d'écran</p>
+                    <a href="scenario_prise_en_main_accessible.txt" class="download-button" download>Télécharger</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <p>&copy; 2025 System Universe d100 - Jeu de Rôle Accessible</p>
+        <p>Basé sur la série de livres System Universe</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

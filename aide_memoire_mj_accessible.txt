@@ -1,0 +1,59 @@
+Aide-Mémoire MJ - System Universe d100 (Version Accessible)
+
+Résolution d'Actions
+
+- Formule : Lancer 1d100 et obtenir un résultat inférieur ou égal à (Attribut + Bonus de Compétence + Modificateurs).
+
+Modificateurs de Difficulté
+
+- Très Facile : +30%
+- Facile : +20%
+- Normale : +0%
+- Difficile : -20%
+- Très Difficile : -30%
+- Héroïque : -40%
+
+Réussites et Échecs Critiques
+
+- Réussite Critique : 1 à 5
+- Échec Critique : 96 à 100
+
+Combat
+
+Initiative
+
+- Formule : 1d100 + Initiative du personnage.
+
+Jets d'Attaque
+
+- Corps à Corps : 1d100 ≤ COR + Bonus d'Arme + Modificateurs.
+- Distance : 1d100 ≤ ESP + Bonus d'Arme + Modificateurs.
+
+Calcul des Dégâts
+
+- Légère : d100 / 10
+- Moyenne : d100 / 5
+- Lourde : d100 / 3
+- Très Lourde : d100 / 2
+
+Progression
+
+- XP pour Niveau Suivant : Niveau Actuel × 100.
+- Gains par Niveau : +10 points d'attributs, +1 rang de compétence.
+
+Rangs de Compétence
+
+- Novice : +0%
+- Rang 1 : +20%
+- Rang 2 : +30%
+- Rang 3 : +40%
+- Rang 4 : +50%
+- Rang 5 : +60%
+
+Conseils d'Accessibilité
+
+- Décrivez les scènes avec tous les sens.
+- Annoncez clairement les résultats des dés.
+- Utilisez le lanceur de dés accessible.
+- Fournissez des descriptions textuelles des visuelles.
+
