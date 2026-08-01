@@ -1,0 +1,42 @@
+# Fichiers temporaires système
+.DS_Store
+Thumbs.db
+*~
+
+# Fichiers Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environnements virtuels
+venv/
+.venv/
+env/
+.env/
+
+# Fichiers de l'éditeur / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Note : Les fichiers binaires (PDF, MP3) sont actuellement versionnés dans le dépôt.
+# À l'avenir, il est recommandé de les migrer vers Git LFS.

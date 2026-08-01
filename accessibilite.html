@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Déclaration d'accessibilité du site System Universe d100.">
+    <title>Déclaration d'accessibilité — System Universe d100</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .accessibilite-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            line-height: 1.8;
+        }
+        .accessibilite-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .accessibilite-content h3 {
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--color-text-accent);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .back-link:focus {
+            outline: 3px solid var(--color-primary-light);
+            outline-offset: 2px;
+        }
+        .conformite-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .conformite-table th,
+        .conformite-table td {
+            border: 1px solid var(--color-border);
+            padding: 0.8rem 1rem;
+            text-align: left;
+        }
+        .conformite-table th {
+            background: var(--color-surface);
+            font-weight: bold;
+        }
+        .conformite-table tr:nth-child(even) {
+            background: var(--color-surface-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <button id="themeToggle" class="theme-toggle" aria-label="Passer en mode clair">☀️ Mode clair</button>
+
+    <header class="banner" role="banner">
+        <div class="banner-content">
+            <img src="logo-system-universe.png" alt="Logo System Universe d100" class="logo">
+            <div class="banner-text">
+                <h1>System Universe d100</h1>
+                <p>Déclaration d'accessibilité</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="accessibilite-content" role="main">
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+
+        <h2>Déclaration d'accessibilité</h2>
+        <p><strong>Date de publication :</strong> 2 août 2026</p>
+        <p><strong>Responsable :</strong> Yohann Poulain (Fuzatifan)</p>
+
+        <h3>Engagement</h3>
+        <p>
+            Le site <strong>System Universe d100</strong> est conçu avec l'accessibilité numérique comme priorité absolue. Notre objectif est de permettre à toute personne, quelle que soit sa situation de handicap, d'accéder à l'ensemble du contenu et des fonctionnalités proposés.
+        </p>
+        <p>
+            Ce site vise la conformité au niveau <strong>AA</strong> des <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">Règles pour l'accessibilité des contenus Web (WCAG) 2.1</a>.
+        </p>
+
+        <h3>État de conformité</h3>
+        <table class="conformite-table" aria-label="État de conformité WCAG 2.1">
+            <thead>
+                <tr>
+                    <th scope="col">Critère</th>
+                    <th scope="col">Niveau</th>
+                    <th scope="col">État</th>
+                    <th scope="col">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Navigation 100% clavier</td>
+                    <td>A</td>
+                    <td>✅ Conforme</td>
+                    <td>Tous les éléments interactifs sont accessibles au clavier. Raccourcis Alt+1 à Alt+4.</td>
+                </tr>
+                <tr>
+                    <td>Attributs ARIA (live regions, roles)</td>
+                    <td>A</td>
+                    <td>✅ Conforme</td>
+                    <td>Résultats de dés et tests annoncés via <code>aria-live="polite"</code>.</td>
+                </tr>
+                <tr>
+                    <td>Contrastes de couleurs</td>
+                    <td>AA</td>
+                    <td>✅ Conforme (mode sombre)</td>
+                    <td>Ratio de contraste ≥ 4.5:1 pour le texte standard en mode sombre.</td>
+                </tr>
+                <tr>
+                    <td>Mode clair / sombre</td>
+                    <td>AA</td>
+                    <td>✅ Conforme</td>
+                    <td>Respect de <code>prefers-color-scheme</code> et bouton de bascule manuel.</td>
+                </tr>
+                <tr>
+                    <td>Réduction des animations</td>
+                    <td>AA</td>
+                    <td>✅ Conforme</td>
+                    <td>Respect de <code>prefers-reduced-motion</code>.</td>
+                </tr>
+                <tr>
+                    <td>Textes alternatifs (images)</td>
+                    <td>A</td>
+                    <td>✅ Conforme</td>
+                    <td>Toutes les images ont un attribut <code>alt</code> descriptif. Les icônes décoratives ont <code>aria-hidden="true"</code>.</td>
+                </tr>
+                <tr>
+                    <td>Synthèse vocale (Web Speech API)</td>
+                    <td>AAA</td>
+                    <td>✅ Implémenté</td>
+                    <td>Les résultats de dés sont lus vocalement si la synthèse vocale est disponible dans le navigateur.</td>
+                </tr>
+                <tr>
+                    <td>Documents PDF accessibles</td>
+                    <td>AA</td>
+                    <td>⚠️ Partiel</td>
+                    <td>Des versions TXT accessibles sont fournies pour tous les PDFs. La conformité PDF/UA des PDFs n'a pas encore été vérifiée formellement.</td>
+                </tr>
+                <tr>
+                    <td>Transcriptions des contenus audio</td>
+                    <td>A</td>
+                    <td>⚠️ Partiel</td>
+                    <td>Les scripts des dramatiques audio sont disponibles dans le dépôt GitHub. Des transcriptions formelles sont en cours de publication.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Fonctionnalités d'accessibilité</h3>
+        <p>Ce site intègre les fonctionnalités suivantes pour améliorer l'expérience des utilisateurs en situation de handicap :</p>
+        <ul style="margin-left: 2rem; line-height: 2;">
+            <li>Navigation entièrement au clavier avec raccourcis dédiés (Alt+1 à Alt+4, Espace).</li>
+            <li>Compatibilité avec les lecteurs d'écran NVDA, JAWS et le Narrateur Windows.</li>
+            <li>Annonces vocales des résultats de dés via la synthèse vocale du navigateur.</li>
+            <li>Régions ARIA live pour les mises à jour dynamiques de contenu.</li>
+            <li>Mode sombre (par défaut) et mode clair, avec respect de la préférence système.</li>
+            <li>Désactivation des animations si l'utilisateur le préfère (<code>prefers-reduced-motion</code>).</li>
+            <li>Versions texte pur (.txt) de tous les documents de jeu.</li>
+            <li>Lanceur de dés Python avec synthèse vocale française (pyttsx3).</li>
+        </ul>
+
+        <h3>Limitations connues</h3>
+        <p>
+            Malgré nos efforts, certains contenus présentent des limitations d'accessibilité que nous travaillons à corriger :
+        </p>
+        <ul style="margin-left: 2rem; line-height: 2;">
+            <li>Les fichiers PDF n'ont pas encore été soumis à un audit de conformité PDF/UA. En attendant, des versions TXT accessibles sont disponibles pour chaque document.</li>
+            <li>Les fichiers audio des dramatiques (MP3) n'ont pas encore de transcriptions publiées sur le site. Les scripts sont disponibles dans le dépôt GitHub.</li>
+        </ul>
+
+        <h3>Contact</h3>
+        <p>
+            Si vous rencontrez des difficultés d'accessibilité sur ce site ou souhaitez signaler un problème, vous pouvez ouvrir une <a href="https://github.com/Fuzatifan/system-universe-d100/issues" target="_blank" rel="noopener noreferrer">Issue sur GitHub</a>.
+        </p>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025–2026 System Universe d100 — Jeu de Rôle Accessible</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

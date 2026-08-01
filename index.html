@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +9,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Bouton de bascule de thème (fixe, accessible) -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Passer en mode clair">☀️ Mode clair</button>
+
     <!-- Bannière -->
-    <header class="banner">
+    <header class="banner" role="banner">
         <div class="banner-content">
             <img src="logo-system-universe.png" alt="Logo System Universe d100" class="logo">
             <div class="banner-text">
                 <h1>System Universe d100</h1>
                 <p>Jeu de Rôle Accessible</p>
             </div>
-
         </div>
-        <span class="version-badge">Version UTF-8</span>
+        <span class="version-badge" aria-label="Version UTF-8">Version UTF-8</span>
     </header>
 
-    <!-- Navigation -->
-    <nav class="navigation">
-        <button class="nav-button active" data-tab="accueil">Accueil</button>
-        <button class="nav-button" data-tab="lanceur">Lanceur de Dés</button>
-        <button class="nav-button" data-tab="campagne">Campagne</button>
-        <button class="nav-button" data-tab="telechargements">Téléchargements</button>
+    <!-- Navigation principale -->
+    <nav class="navigation" role="navigation" aria-label="Navigation principale">
+        <button class="nav-button active" data-tab="accueil" aria-selected="true">Accueil</button>
+        <button class="nav-button" data-tab="lanceur" aria-selected="false">Lanceur de Dés</button>
+        <button class="nav-button" data-tab="campagne" aria-selected="false">Campagne</button>
+        <button class="nav-button" data-tab="telechargements" aria-selected="false">Téléchargements</button>
     </nav>
 
     <!-- Contenu Principal -->
-    <main class="main-content">
+    <main class="main-content" id="contenu-principal" role="main">
+
         <!-- Onglet Accueil -->
-        <section id="accueil" class="tab-content active">
+        <section id="accueil" class="tab-content active" aria-label="Accueil">
             <h2>Bienvenue dans System Universe d100</h2>
-            <p>Un jeu de rôle post-apocalyptique où l'humanité doit s'adapter à un monde transformé par le "Système" - une force mystérieuse qui a réécrit les lois de la réalité.</p>
-            
+            <p>Un jeu de rôle post-apocalyptique où l'humanité doit s'adapter à un monde transformé par le "Système" — une force mystérieuse qui a réécrit les lois de la réalité.</p>
+
             <div class="features">
                 <div class="feature-card">
                     <h3>🎲 Système d100 Simple</h3>
@@ -54,27 +58,76 @@
         </section>
 
         <!-- Onglet Lanceur de Dés -->
-        <section id="lanceur" class="tab-content">
+        <section id="lanceur" class="tab-content" aria-label="Lanceur de Dés">
             <h2>Lanceur de Dés d100</h2>
+
+            <!-- Lancer simple -->
             <div class="dice-launcher">
-                <button id="launchDice" class="dice-button">Lancer d100</button>
-                <div id="diceResult" class="dice-result"></div>
-                <div id="diceHistory" class="dice-history">
-                    <h3>Historique des Lancers</h3>
-                    <ul id="historyList"></ul>
-                </div>
+                <button id="launchDice" class="dice-button" aria-label="Lancer un dé à 100 faces">Lancer d100</button>
+                <div id="diceResult" class="dice-result" role="status" aria-live="polite" aria-atomic="true"></div>
+                <p class="dice-result-label">Appuyez sur Espace pour lancer rapidement</p>
+            </div>
+
+            <!-- Test de compétence -->
+            <div class="skill-test-section" aria-labelledby="titre-test-competence">
+                <h3 id="titre-test-competence">Test de Compétence</h3>
+                <p>Entrez votre valeur de compétence et un modificateur de difficulté pour effectuer un test.</p>
+                <form id="formTestCompetence" novalidate>
+                    <div class="form-group">
+                        <label for="inputCompetence">Valeur de compétence (0–100) :</label>
+                        <input type="number" id="inputCompetence" name="competence"
+                               min="0" max="100" value="50"
+                               aria-required="true"
+                               aria-describedby="aide-competence">
+                        <span id="aide-competence" class="sr-only">Entrez un nombre entre 0 et 100 représentant votre compétence.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputModificateur">Modificateur de difficulté (+/−) :</label>
+                        <input type="number" id="inputModificateur" name="modificateur"
+                               value="0"
+                               aria-describedby="aide-modificateur">
+                        <span id="aide-modificateur" class="sr-only">Exemples : −40 (Héroïque), 0 (Normal), +30 (Très Facile).</span>
+                    </div>
+                    <button type="submit" class="btn-secondary">Effectuer le test</button>
+                </form>
+                <div id="testCompetenceResult" class="test-result-box" role="status" aria-live="polite" aria-atomic="true"></div>
+            </div>
+
+            <!-- Calcul de dégâts -->
+            <div class="damage-section" aria-labelledby="titre-degats">
+                <h3 id="titre-degats">Calcul de Dégâts</h3>
+                <p>Sélectionnez le type d'arme pour calculer les dégâts infligés.</p>
+                <form id="formDegats" novalidate>
+                    <div class="form-group">
+                        <label for="selectArme">Type d'arme :</label>
+                        <select id="selectArme" name="arme" aria-required="true">
+                            <option value="legere">Légère (couteau, matraque) — d100 ÷ 10</option>
+                            <option value="moyenne" selected>Moyenne (épée, pistolet) — d100 ÷ 5</option>
+                            <option value="lourde">Lourde (hache 2 mains, fusil) — d100 ÷ 3</option>
+                            <option value="tres-lourde">Très lourde (lance-roquettes) — d100 ÷ 2</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-secondary">Calculer les dégâts</button>
+                </form>
+                <div id="degatsResult" class="test-result-box" role="status" aria-live="polite" aria-atomic="true"></div>
+            </div>
+
+            <!-- Historique -->
+            <div class="dice-history" aria-labelledby="titre-historique">
+                <h3 id="titre-historique">Historique des Lancers</h3>
+                <ul id="historyList" aria-label="Les 10 derniers lancers"></ul>
             </div>
         </section>
 
         <!-- Onglet Campagne -->
-        <section id="campagne" class="tab-content">
+        <section id="campagne" class="tab-content" aria-label="Campagne">
             <h2>Campagne "Les Échos du Système"</h2>
-            <p>Une campagne épique en 6 actes pour 18-24 sessions de jeu, emmenant les personnages du niveau 1 au niveau 10.</p>
-            
+            <p>Une campagne épique en 6 actes pour 18–24 sessions de jeu, emmenant les personnages du niveau 1 au niveau 10.</p>
+
             <div class="campaign-info">
                 <h3>Synopsis</h3>
-                <p>Les personnages découvrent qu'ils sont des "Résonants" - des humains capables d'influencer le Système lui-même. Ils devront naviguer entre trois factions aux visions opposées pour l'avenir de l'humanité.</p>
-                
+                <p>Les personnages découvrent qu'ils sont des "Résonants" — des humains capables d'influencer le Système lui-même. Ils devront naviguer entre trois factions aux visions opposées pour l'avenir de l'humanité.</p>
+
                 <h3>Les 3 Factions</h3>
                 <div class="factions">
                     <div class="faction-card faction-equilibre">
@@ -90,126 +143,126 @@
                         <p>Créateurs originaux du Système avec un plan secret.</p>
                     </div>
                 </div>
-                
+
                 <h3>Structure de la Campagne</h3>
                 <ul class="campaign-acts">
-                    <li><strong>Acte 1 :</strong> L'Éveil des Anomalies (Niveaux 1-2)</li>
-                    <li><strong>Acte 2 :</strong> Les Fragments Perdus (Niveaux 2-3)</li>
-                    <li><strong>Acte 3 :</strong> La Guerre des Codes (Niveaux 4-5)</li>
-                    <li><strong>Acte 4 :</strong> Les Échos du Passé (Niveaux 5-6)</li>
-                    <li><strong>Acte 5 :</strong> La Convergence (Niveaux 7-8)</li>
-                    <li><strong>Acte 6 :</strong> L'Aube Nouvelle (Niveaux 9-10)</li>
+                    <li><strong>Acte 1 :</strong> L'Éveil des Anomalies (Niveaux 1–2)</li>
+                    <li><strong>Acte 2 :</strong> Les Fragments Perdus (Niveaux 2–3)</li>
+                    <li><strong>Acte 3 :</strong> La Guerre des Codes (Niveaux 4–5)</li>
+                    <li><strong>Acte 4 :</strong> Les Échos du Passé (Niveaux 5–6)</li>
+                    <li><strong>Acte 5 :</strong> La Convergence (Niveaux 7–8)</li>
+                    <li><strong>Acte 6 :</strong> L'Aube Nouvelle (Niveaux 9–10)</li>
                 </ul>
             </div>
         </section>
 
         <!-- Onglet Téléchargements -->
-        <section id="telechargements" class="tab-content">
+        <section id="telechargements" class="tab-content" aria-label="Téléchargements">
             <h2>Téléchargements</h2>
             <p>Tous les fichiers nécessaires pour jouer à System Universe d100. Version UTF-8 corrigée pour un affichage parfait des caractères français.</p>
-            
+
             <div class="downloads-grid">
                 <!-- Documents PDF Originaux -->
                 <div class="download-card">
-                    <div class="download-icon">📖</div>
+                    <div class="download-icon" aria-hidden="true">📖</div>
                     <h3>Manuel de Jeu Complet</h3>
-                    <p class="download-size">350 KB</p>
+                    <p class="download-size">350 Ko</p>
                     <p>Règles complètes du système d100, création de personnages, magie et bestiaire</p>
-                    <a href="System_Universe_JDR_Manuel_d100_UTF8.pdf" class="download-button" download>Télécharger</a>
+                    <a href="System_Universe_JDR_Manuel_d100_UTF8.pdf" class="download-button" download aria-label="Télécharger le Manuel de Jeu Complet (PDF, 350 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card">
-                    <div class="download-icon">📋</div>
+                    <div class="download-icon" aria-hidden="true">📋</div>
                     <h3>Fiche de Personnage</h3>
-                    <p class="download-size">300 KB</p>
+                    <p class="download-size">300 Ko</p>
                     <p>Template vierge pour créer vos personnages avec toutes les statistiques</p>
-                    <a href="Fiche_Personnage_d100_UTF8.pdf" class="download-button" download>Télécharger</a>
+                    <a href="Fiche_Personnage_d100_UTF8.pdf" class="download-button" download aria-label="Télécharger la Fiche de Personnage (PDF, 300 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card">
-                    <div class="download-icon">🎯</div>
+                    <div class="download-icon" aria-hidden="true">🎯</div>
                     <h3>Aide-Mémoire MJ</h3>
-                    <p class="download-size">320 KB</p>
+                    <p class="download-size">320 Ko</p>
                     <p>Référence rapide pour le Maître de Jeu avec toutes les tables importantes</p>
-                    <a href="Aide_Memoire_MJ_d100_UTF8.pdf" class="download-button" download>Télécharger</a>
+                    <a href="Aide_Memoire_MJ_d100_UTF8.pdf" class="download-button" download aria-label="Télécharger l'Aide-Mémoire MJ (PDF, 320 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card">
-                    <div class="download-icon">📚</div>
+                    <div class="download-icon" aria-hidden="true">📚</div>
                     <h3>Campagne "Les Échos du Système"</h3>
-                    <p class="download-size">450 KB</p>
-                    <p>Campagne épique en 6 actes pour 18-24 sessions de jeu (Niveaux 1-10)</p>
-                    <a href="Campagne_System_Universe_d100_Les_Echos_du_Systeme.pdf" class="download-button" download>Télécharger</a>
+                    <p class="download-size">450 Ko</p>
+                    <p>Campagne épique en 6 actes pour 18–24 sessions de jeu (Niveaux 1–10)</p>
+                    <a href="Campagne_System_Universe_d100_Les_Echos_du_Systeme.pdf" class="download-button" download aria-label="Télécharger la Campagne Les Échos du Système (PDF, 450 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card">
-                    <div class="download-icon">🎲</div>
+                    <div class="download-icon" aria-hidden="true">🎲</div>
                     <h3>Aides de Jeu Campagne</h3>
-                    <p class="download-size">280 KB</p>
+                    <p class="download-size">280 Ko</p>
                     <p>Cartes de factions, tables de résonance et conseils d'accessibilité pour MJ</p>
-                    <a href="Aides_de_Jeu_Campagne_System_Universe.pdf" class="download-button" download>Télécharger</a>
+                    <a href="Aides_de_Jeu_Campagne_System_Universe.pdf" class="download-button" download aria-label="Télécharger les Aides de Jeu Campagne (PDF, 280 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card">
-                    <div class="download-icon">🔊</div>
+                    <div class="download-icon" aria-hidden="true">🔊</div>
                     <h3>Lanceur de Dés Accessible</h3>
-                    <p class="download-size">15 KB</p>
+                    <p class="download-size">15 Ko</p>
                     <p>Application Python avec synthèse vocale pour personnes aveugles</p>
-                    <a href="lanceur_des_accessible.py" class="download-button" download>Télécharger</a>
+                    <a href="lanceur_des_accessible.py" class="download-button" download aria-label="Télécharger le Lanceur de Dés Accessible (Python, 15 Ko)">Télécharger</a>
                 </div>
 
-                <!-- Nouveaux Documents Accessibles (.txt) -->
+                <!-- Documents Accessibles (.txt) -->
                 <div class="download-card accessible">
-                    <div class="download-icon">♿📖</div>
+                    <div class="download-icon" aria-hidden="true">♿📖</div>
                     <h3>Manuel Accessible (TXT)</h3>
-                    <p class="download-size">25 KB</p>
+                    <p class="download-size">25 Ko</p>
                     <p>Version texte pur du manuel, parfaitement lisible par les lecteurs d'écran</p>
-                    <a href="manuel_accessible.txt" class="download-button" download>Télécharger</a>
+                    <a href="manuel_accessible.txt" class="download-button" download aria-label="Télécharger le Manuel Accessible en format texte (TXT, 25 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card accessible">
-                    <div class="download-icon">♿📋</div>
+                    <div class="download-icon" aria-hidden="true">♿📋</div>
                     <h3>Fiche Personnage Accessible (TXT)</h3>
-                    <p class="download-size">2 KB</p>
+                    <p class="download-size">2 Ko</p>
                     <p>Fiche de personnage en texte pur, optimisée pour l'accessibilité</p>
-                    <a href="fiche_personnage_accessible.txt" class="download-button" download>Télécharger</a>
+                    <a href="fiche_personnage_accessible.txt" class="download-button" download aria-label="Télécharger la Fiche Personnage Accessible en format texte (TXT, 2 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card accessible">
-                    <div class="download-icon">♿🎯</div>
+                    <div class="download-icon" aria-hidden="true">♿🎯</div>
                     <h3>Aide-Mémoire MJ Accessible (TXT)</h3>
-                    <p class="download-size">3 KB</p>
+                    <p class="download-size">3 Ko</p>
                     <p>Référence rapide MJ en texte pur, compatible lecteurs d'écran</p>
-                    <a href="aide_memoire_mj_accessible.txt" class="download-button" download>Télécharger</a>
+                    <a href="aide_memoire_mj_accessible.txt" class="download-button" download aria-label="Télécharger l'Aide-Mémoire MJ Accessible en format texte (TXT, 3 Ko)">Télécharger</a>
                 </div>
 
-                <!-- Scénario de Prise en Main -->
                 <div class="download-card">
-                    <div class="download-icon">🎬</div>
+                    <div class="download-icon" aria-hidden="true">🎬</div>
                     <h3>Scénario de Prise en Main</h3>
-                    <p class="download-size">341 KB</p>
-                    <p>Aventure d'introduction de 2-3h utilisant les personnages de la campagne</p>
-                    <a href="Scenario_Prise_en_Main_System_Universe.pdf" class="download-button" download>Télécharger</a>
+                    <p class="download-size">341 Ko</p>
+                    <p>Aventure d'introduction de 2–3h utilisant les personnages de la campagne</p>
+                    <a href="Scenario_Prise_en_Main_System_Universe.pdf" class="download-button" download aria-label="Télécharger le Scénario de Prise en Main (PDF, 341 Ko)">Télécharger</a>
                 </div>
 
                 <div class="download-card accessible">
-                    <div class="download-icon">♿🎬</div>
+                    <div class="download-icon" aria-hidden="true">♿🎬</div>
                     <h3>Scénario de Prise en Main Accessible (TXT)</h3>
-                    <p class="download-size">24 KB</p>
+                    <p class="download-size">24 Ko</p>
                     <p>Version texte pur du scénario d'introduction, optimisée pour les lecteurs d'écran</p>
-                    <a href="scenario_prise_en_main_accessible.txt" class="download-button" download>Télécharger</a>
+                    <a href="scenario_prise_en_main_accessible.txt" class="download-button" download aria-label="Télécharger le Scénario de Prise en Main Accessible en format texte (TXT, 24 Ko)">Télécharger</a>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Pied de page -->
-    <footer class="footer">
-        <p>&copy; 2025 System Universe d100 - Jeu de Rôle Accessible</p>
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025–2026 System Universe d100 — Jeu de Rôle Accessible</p>
         <p>Basé sur la série de livres System Universe</p>
+        <p><a href="accessibilite.html">Déclaration d'accessibilité</a></p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
