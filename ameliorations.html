@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Présentation des améliorations apportées au projet System Universe d100 — version 2.0.">
+    <title>Améliorations v2.0 — System Universe d100</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ---- Variables supplémentaires pour cette page ---- */
+        :root {
+            --color-badge-doc: #1565c0;
+            --color-badge-web: #6a1b9a;
+            --color-badge-python: #2e7d32;
+            --color-badge-game: #e65100;
+            --color-badge-access: #00695c;
+            --color-badge-git: #4a148c;
+            --color-timeline-line: rgba(156, 39, 176, 0.4);
+        }
+
+        /* ---- Layout général de la page ---- */
+        .page-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        /* ---- Hero section ---- */
+        .hero {
+            text-align: center;
+            padding: 4rem var(--spacing-lg) 3rem;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.4rem 1.2rem;
+            border-radius: var(--radius-xl);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--color-text-accent);
+            text-shadow: 0 0 30px rgba(206, 147, 216, 0.4);
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-sub);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--color-surface);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            min-width: 140px;
+            transition: var(--transition-default);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px var(--shadow-primary);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--color-text-accent);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-text-sub);
+            margin-top: 0.3rem;
+        }
+
+        /* ---- Séparateur ---- */
+        .section-divider {
+            border: none;
+            border-top: 2px solid var(--color-timeline-line);
+            margin: 3rem 0;
+        }
+
+        /* ---- Titres de section ---- */
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--color-text-accent);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .section-title .icon {
+            font-size: 2rem;
+        }
+
+        .section-intro {
+            color: var(--color-text-sub);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        /* ---- Badges de catégorie ---- */
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-xl);
+            color: #fff;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .badge-doc     { background: var(--color-badge-doc); }
+        .badge-web     { background: var(--color-badge-web); }
+        .badge-python  { background: var(--color-badge-python); }
+        .badge-game    { background: var(--color-badge-game); }
+        .badge-access  { background: var(--color-badge-access); }
+        .badge-git     { background: var(--color-badge-git); }
+
+        /* ---- Grille de cartes d'amélioration ---- */
+        .improvements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: 3rem;
+        }
+
+        .improvement-card {
+            background: var(--color-surface);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            transition: var(--transition-default);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .improvement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+        }
+
+        .improvement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px var(--shadow-primary);
+            border-color: var(--color-primary-light);
+        }
+
+        .improvement-card h3 {
+            font-size: 1.2rem;
+            color: var(--color-text-accent);
+            margin: var(--spacing-sm) 0 var(--spacing-md);
+        }
+
+        .improvement-card p {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        /* ---- Section "Avant / Après" ---- */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin: var(--spacing-lg) 0 3rem;
+        }
+
+        .before-after-panel {
+            background: var(--color-surface);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+        }
+
+        .before-after-panel.before {
+            border-color: rgba(244, 67, 54, 0.5);
+        }
+
+        .before-after-panel.after {
+            border-color: rgba(76, 175, 80, 0.5);
+        }
+
+        .panel-label {
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-md);
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-xl);
+            display: inline-block;
+        }
+
+        .before .panel-label {
+            background: rgba(244, 67, 54, 0.2);
+            color: #ef9a9a;
+            border: 1px solid rgba(244, 67, 54, 0.4);
+        }
+
+        .after .panel-label {
+            background: rgba(76, 175, 80, 0.2);
+            color: #a5d6a7;
+            border: 1px solid rgba(76, 175, 80, 0.4);
+        }
+
+        .before-after-panel h4 {
+            font-size: 1.1rem;
+            color: var(--color-text-accent);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .check-list li {
+            padding: 0.4rem 0;
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+
+        .check-list li::before {
+            content: '✗';
+            color: #ef9a9a;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .after .check-list li::before {
+            content: '✓';
+            color: #a5d6a7;
+        }
+
+        /* ---- Section Tests ---- */
+        .tests-showcase {
+            background: var(--color-surface-dark);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin-bottom: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .tests-showcase .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red   { background: #f44336; }
+        .dot-yellow { background: #ffc107; }
+        .dot-green { background: #4caf50; }
+
+        .terminal-title {
+            font-size: 0.85rem;
+            color: var(--color-text-sub);
+            margin-left: auto;
+        }
+
+        .terminal-line {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: var(--color-text-muted);
+        }
+
+        .terminal-line.passed { color: #a5d6a7; }
+        .terminal-line.header { color: var(--color-text-accent); }
+        .terminal-line.summary { color: #fff176; font-weight: bold; }
+
+        /* ---- CTA final ---- */
+        .cta-section {
+            text-align: center;
+            padding: 3rem var(--spacing-lg);
+            background: var(--color-surface);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            margin-bottom: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .cta-section p {
+            color: var(--color-text-sub);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: bold;
+            font-size: 1.05rem;
+            transition: var(--transition-default);
+            box-shadow: 0 4px 15px var(--shadow-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-primary-strong);
+        }
+
+        .btn-primary:focus {
+            outline: 3px solid var(--color-primary-light);
+            outline-offset: 3px;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--color-text-accent);
+            text-decoration: none;
+            border: 2px solid var(--color-primary);
+            border-radius: var(--radius-md);
+            font-weight: bold;
+            font-size: 1.05rem;
+            transition: var(--transition-default);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-surface);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline:focus {
+            outline: 3px solid var(--color-primary-light);
+            outline-offset: 3px;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                gap: var(--spacing-md);
+            }
+
+            .stat-card {
+                min-width: 110px;
+                padding: 1rem 1.2rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bouton de bascule de thème -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Passer en mode clair">☀️ Mode clair</button>
+
+    <!-- Bannière -->
+    <header class="banner" role="banner">
+        <div class="banner-content">
+            <img src="logo-system-universe.png" alt="Logo System Universe d100" class="logo">
+            <div class="banner-text">
+                <h1>System Universe d100</h1>
+                <p>Journal des améliorations</p>
+            </div>
+        </div>
+        <span class="version-badge" aria-label="Version 2.0">v2.0</span>
+    </header>
+
+    <!-- Navigation de retour -->
+    <nav class="navigation" role="navigation" aria-label="Navigation">
+        <a href="index.html" class="nav-button" style="text-decoration:none;">← Retour au site</a>
+        <a href="accessibilite.html" class="nav-button" style="text-decoration:none;">Accessibilité</a>
+        <a href="https://github.com/Fuzatifan/system-universe-d100" class="nav-button" style="text-decoration:none;" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+
+    <main role="main">
+        <div class="page-wrapper">
+
+            <!-- Hero -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-badge" aria-label="Version 2.0 publiée le 2 août 2026">v2.0 — Août 2026</div>
+                <h1 id="hero-title">Améliorations du Projet</h1>
+                <p class="hero-subtitle">
+                    Une mise à jour majeure couvrant six domaines : documentation, développement web, Python, game design, accessibilité et gestion de version.
+                </p>
+
+                <!-- Statistiques clés -->
+                <div class="hero-stats" role="list" aria-label="Statistiques des améliorations">
+                    <div class="stat-card" role="listitem">
+                        <span class="stat-number" aria-label="12 fichiers modifiés ou créés">12</span>
+                        <span class="stat-label">Fichiers modifiés ou créés</span>
+                    </div>
+                    <div class="stat-card" role="listitem">
+                        <span class="stat-number" aria-label="25 tests unitaires">25</span>
+                        <span class="stat-label">Tests unitaires (pytest)</span>
+                    </div>
+                    <div class="stat-card" role="listitem">
+                        <span class="stat-number" aria-label="4 classes Python">4</span>
+                        <span class="stat-label">Classes Python créées</span>
+                    </div>
+                    <div class="stat-card" role="listitem">
+                        <span class="stat-number" aria-label="6 modules JavaScript">6</span>
+                        <span class="stat-label">Modules JavaScript</span>
+                    </div>
+                    <div class="stat-card" role="listitem">
+                        <span class="stat-number" aria-label="Plus de 40 variables CSS">40+</span>
+                        <span class="stat-label">Variables CSS</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Section 1 : Documentation & Git -->
+            <section aria-labelledby="section-doc">
+                <h2 class="section-title" id="section-doc">
+                    <span class="icon" aria-hidden="true">📄</span>
+                    Documentation &amp; Gestion de version
+                </h2>
+                <p class="section-intro">
+                    Le projet manquait de documentation d'entrée et de configuration Git de base, rendant la prise en main difficile pour tout nouvel utilisateur.
+                </p>
+
+                <div class="improvements-grid">
+                    <div class="improvement-card">
+                        <span class="badge badge-doc">Documentation</span>
+                        <span class="card-icon" aria-hidden="true">📖</span>
+                        <h3>README.md complet</h3>
+                        <p>Présentation de l'univers, du système d100, de la structure du dépôt, des instructions d'installation et de l'engagement accessibilité. La première impression du dépôt est désormais professionnelle et informative.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-git">Git</span>
+                        <span class="card-icon" aria-hidden="true">🚫</span>
+                        <h3>.gitignore</h3>
+                        <p>Protection contre l'inclusion accidentelle de fichiers temporaires Python (<code>__pycache__</code>, <code>*.pyc</code>), d'environnements virtuels (<code>venv/</code>) et de fichiers d'éditeurs (<code>.vscode/</code>, <code>.idea/</code>).</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-python">Python</span>
+                        <span class="card-icon" aria-hidden="true">📦</span>
+                        <h3>requirements.txt</h3>
+                        <p>La dépendance <code>pyttsx3</code> est maintenant documentée. L'installation se fait en une seule commande : <code>pip install -r requirements.txt</code>. Fini les messages d'erreur cryptiques au premier lancement.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Section 2 : CSS -->
+            <section aria-labelledby="section-css">
+                <h2 class="section-title" id="section-css">
+                    <span class="icon" aria-hidden="true">🎨</span>
+                    CSS : Variables, Thème et Accessibilité
+                </h2>
+                <p class="section-intro">
+                    La feuille de style répétait les mêmes valeurs de couleur à plus de 30 endroits et ne proposait aucune adaptation à la préférence de l'utilisateur.
+                </p>
+
+                <!-- Avant / Après -->
+                <div class="before-after">
+                    <div class="before-after-panel before" aria-label="Avant les améliorations CSS">
+                        <span class="panel-label">Avant</span>
+                        <h4>Problèmes identifiés</h4>
+                        <ul class="check-list">
+                            <li>Couleur <code>#9c27b0</code> répétée 30+ fois</li>
+                            <li>Pas de variables CSS</li>
+                            <li>Thème unique (sombre uniquement)</li>
+                            <li>Pas de respect de <code>prefers-color-scheme</code></li>
+                            <li>Animations non désactivables</li>
+                            <li>Pas de classe <code>.sr-only</code></li>
+                        </ul>
+                    </div>
+                    <div class="before-after-panel after" aria-label="Après les améliorations CSS">
+                        <span class="panel-label">Après</span>
+                        <h4>Améliorations apportées</h4>
+                        <ul class="check-list">
+                            <li>40+ variables CSS (<code>--color-*</code>, <code>--spacing-*</code>)</li>
+                            <li>Thème sombre et clair complets</li>
+                            <li>Respect de <code>prefers-color-scheme</code></li>
+                            <li>Bouton de bascule avec sauvegarde localStorage</li>
+                            <li>Respect de <code>prefers-reduced-motion</code></li>
+                            <li>Classe <code>.sr-only</code> pour l'accessibilité</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Section 3 : JavaScript -->
+            <section aria-labelledby="section-js">
+                <h2 class="section-title" id="section-js">
+                    <span class="icon" aria-hidden="true">⚙️</span>
+                    JavaScript : Modules et Nouvelles Fonctionnalités
+                </h2>
+                <p class="section-intro">
+                    Le script original était un seul fichier monolithique. Les fonctionnalités de test de compétence et de calcul de dégâts, présentes dans la version Python, étaient absentes du site web.
+                </p>
+
+                <div class="improvements-grid">
+                    <div class="improvement-card">
+                        <span class="badge badge-web">JavaScript</span>
+                        <span class="card-icon" aria-hidden="true">🧩</span>
+                        <h3>Architecture modulaire</h3>
+                        <p>Le code est désormais organisé en 6 modules distincts avec des responsabilités claires : <code>Accessibilite</code>, <code>Theme</code>, <code>Navigation</code>, <code>LanceurDes</code>, <code>TestCompetence</code> et <code>CalculDegats</code>.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-web">Nouvelle fonctionnalité</span>
+                        <span class="card-icon" aria-hidden="true">🎯</span>
+                        <h3>Test de compétence web</h3>
+                        <p>Formulaire interactif permettant de saisir une valeur de compétence et un modificateur de difficulté. Le résultat (Réussite Critique, Réussite, Échec, Échec Critique) est annoncé visuellement et vocalement.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-web">Nouvelle fonctionnalité</span>
+                        <span class="card-icon" aria-hidden="true">⚔️</span>
+                        <h3>Calcul de dégâts web</h3>
+                        <p>Sélection du type d'arme (Légère, Moyenne, Lourde, Très lourde) et calcul automatique des dégâts. Parité fonctionnelle complète avec la version Python du lanceur de dés.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-access">Accessibilité</span>
+                        <span class="card-icon" aria-hidden="true">🔊</span>
+                        <h3>Annonces ARIA renforcées</h3>
+                        <p>Tous les résultats dynamiques (dés, tests, dégâts) sont annoncés via des régions <code>aria-live="assertive"</code> et lus par la synthèse vocale du navigateur. Les attributs <code>aria-selected</code> et <code>aria-label</code> ont été généralisés.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Section 4 : Python -->
+            <section aria-labelledby="section-python">
+                <h2 class="section-title" id="section-python">
+                    <span class="icon" aria-hidden="true">🐍</span>
+                    Python : Architecture OOP et Tests
+                </h2>
+                <p class="section-intro">
+                    Le script procédural a été entièrement refactorisé en classes orientées objet, avec une persistance de l'historique et une couverture de tests unitaires complète.
+                </p>
+
+                <!-- Avant / Après -->
+                <div class="before-after">
+                    <div class="before-after-panel before" aria-label="Avant la refactorisation Python">
+                        <span class="panel-label">Avant (v1.0)</span>
+                        <h4>Architecture procédurale</h4>
+                        <ul class="check-list">
+                            <li>Variables globales (<code>engine</code>, <code>historique</code>)</li>
+                            <li>Historique perdu à chaque fermeture</li>
+                            <li>Aucun test unitaire</li>
+                            <li>Pas de séparation des responsabilités</li>
+                            <li>Difficile à étendre ou à tester</li>
+                        </ul>
+                    </div>
+                    <div class="before-after-panel after" aria-label="Après la refactorisation Python">
+                        <span class="panel-label">Après (v2.0)</span>
+                        <h4>Architecture orientée objet</h4>
+                        <ul class="check-list">
+                            <li>4 classes : <code>SyntheseVocale</code>, <code>Historique</code>, <code>MecaniqueD100</code>, <code>LanceurDes</code></li>
+                            <li>Persistance JSON (<code>~/.su_d100_historique.json</code>)</li>
+                            <li>25 tests unitaires (pytest), tous passés</li>
+                            <li>Méthodes statiques testables indépendamment</li>
+                            <li>Prêt pour une interface graphique future</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vitrine des tests -->
+                <div class="tests-showcase" role="region" aria-label="Résultats des tests unitaires pytest">
+                    <div class="terminal-header">
+                        <div class="terminal-dot dot-red" aria-hidden="true"></div>
+                        <div class="terminal-dot dot-yellow" aria-hidden="true"></div>
+                        <div class="terminal-dot dot-green" aria-hidden="true"></div>
+                        <span class="terminal-title">pytest tests/test_mecanique_d100.py -v</span>
+                    </div>
+                    <div class="terminal-line header">===== test session starts =====</div>
+                    <div class="terminal-line passed">PASSED  TestLancerD100::test_resultat_dans_plage</div>
+                    <div class="terminal-line passed">PASSED  TestLancerD100::test_type_entier</div>
+                    <div class="terminal-line passed">PASSED  TestLancerD100::test_distribution_non_constante</div>
+                    <div class="terminal-line passed">PASSED  TestEvaluerTest::test_reussite_critique_01</div>
+                    <div class="terminal-line passed">PASSED  TestEvaluerTest::test_echec_critique_96</div>
+                    <div class="terminal-line passed">PASSED  TestEvaluerTest::test_reussite_normale</div>
+                    <div class="terminal-line passed">PASSED  TestEvaluerTest::test_echec_normal</div>
+                    <div class="terminal-line passed">PASSED  TestEvaluerTest::test_reussite_sur_seuil_exact</div>
+                    <div class="terminal-line passed">PASSED  TestCalculerDegats::test_arme_legere</div>
+                    <div class="terminal-line passed">PASSED  TestCalculerDegats::test_arme_moyenne</div>
+                    <div class="terminal-line passed">PASSED  TestCalculerDegats::test_arme_lourde</div>
+                    <div class="terminal-line passed">PASSED  TestCalculerDegats::test_arme_tres_lourde</div>
+                    <div class="terminal-line passed">PASSED  TestCalculerDegats::test_arme_invalide</div>
+                    <div class="terminal-line passed">PASSED  TestHistorique::test_ajouter_entree</div>
+                    <div class="terminal-line passed">PASSED  TestHistorique::test_obtenir_derniers</div>
+                    <div class="terminal-line passed">PASSED  TestHistorique::test_limite_max_entrees</div>
+                    <div class="terminal-line passed">PASSED  TestHistorique::test_persistance_json</div>
+                    <div class="terminal-line passed">PASSED  TestHistorique::test_vider_historique</div>
+                    <div class="terminal-line">... et 7 autres tests</div>
+                    <div class="terminal-line summary">===== 25 passed in 0.08s =====</div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Section 5 : Game Design -->
+            <section aria-labelledby="section-game">
+                <h2 class="section-title" id="section-game">
+                    <span class="icon" aria-hidden="true">🎲</span>
+                    Game Design : Bible de l'Univers
+                </h2>
+                <p class="section-intro">
+                    L'univers "System Universe" était riche mais fragmenté entre plusieurs documents. Un document de référence central était indispensable pour la cohérence des futures créations.
+                </p>
+
+                <div class="improvements-grid">
+                    <div class="improvement-card">
+                        <span class="badge badge-game">Lore</span>
+                        <span class="card-icon" aria-hidden="true">🌍</span>
+                        <h3>L'Intégration documentée</h3>
+                        <p>L'événement fondateur du monde — "l'Intégration" — est maintenant décrit avec précision : date zéro, conséquences immédiates, apparition de l'interface du Statut et division en Zones de difficulté.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-game">Personnages</span>
+                        <span class="card-icon" aria-hidden="true">👤</span>
+                        <h3>Arcs narratifs des PJ</h3>
+                        <p>Les 4 personnages pré-tirés ont désormais des arcs narratifs complets : passé, motivations, secrets et objectifs liés aux factions. Le Vétéran, l'Érudit, le Survivant et le Guérisseur sont de véritables personnages, pas seulement des feuilles de stats.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-game">Économie</span>
+                        <span class="card-icon" aria-hidden="true">💰</span>
+                        <h3>Système économique</h3>
+                        <p>Introduction des Crédits Système (CS), de l'économie de troc de l'ancien monde et du système de loot/crafting (Cores de monstres, Blueprints). La campagne longue dispose maintenant d'une économie cohérente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- Section 6 : Accessibilité -->
+            <section aria-labelledby="section-access">
+                <h2 class="section-title" id="section-access">
+                    <span class="icon" aria-hidden="true">♿</span>
+                    Accessibilité : WCAG et Transcriptions
+                </h2>
+                <p class="section-intro">
+                    L'accessibilité était déjà une force du projet. Ces améliorations la formalisent et la complètent sur les points restants.
+                </p>
+
+                <div class="improvements-grid">
+                    <div class="improvement-card">
+                        <span class="badge badge-access">WCAG 2.1</span>
+                        <span class="card-icon" aria-hidden="true">📋</span>
+                        <h3>Déclaration d'accessibilité</h3>
+                        <p>Une page dédiée (<a href="accessibilite.html" style="color:var(--color-text-accent)">accessibilite.html</a>) liste l'état de conformité WCAG 2.1 pour chaque critère, les fonctionnalités implémentées et les limitations connues avec les solutions de contournement disponibles.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-access">Audio</span>
+                        <span class="card-icon" aria-hidden="true">📝</span>
+                        <h3>Index des transcriptions</h3>
+                        <p>Toutes les dramatiques audio (MediEvil, Primal Hunter, Zazie, Battle Zone) ont leur script Markdown référencé dans un index centralisé, rendant le contenu audio accessible aux personnes sourdes et malentendantes.</p>
+                    </div>
+                    <div class="improvement-card">
+                        <span class="badge badge-access">Formulaires</span>
+                        <span class="card-icon" aria-hidden="true">🏷️</span>
+                        <h3>Labels et descriptions ARIA</h3>
+                        <p>Tous les champs de formulaire (test de compétence, calcul de dégâts) ont des labels explicites, des descriptions via <code>aria-describedby</code> et des messages d'erreur annoncés en temps réel.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-divider">
+
+            <!-- CTA -->
+            <section class="cta-section" aria-labelledby="cta-title">
+                <h2 id="cta-title">Explorer le projet</h2>
+                <p>Retrouvez l'ensemble du code source, des documents de jeu et des dramatiques audio sur le dépôt GitHub.</p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="btn-primary">Aller au site principal</a>
+                    <a href="https://github.com/Fuzatifan/system-universe-d100" class="btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                </div>
+            </section>
+
+        </div><!-- /page-wrapper -->
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2025–2026 System Universe d100 — Jeu de Rôle Accessible</p>
+        <p><a href="accessibilite.html">Déclaration d'accessibilité</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
