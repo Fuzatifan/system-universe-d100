@@ -28,10 +28,8 @@ Un système de jeu fluide et unifié :
 - **Lanceur de Dés Python :** `lanceur_des_accessible.py` (Interface 100% clavier avec synthèse vocale).
 
 ### Fictions et Dramatiques Audio
-- `medievil-audio-drama/` : Scripts et audios d'adaptation de MediEvil.
-- `primal-hunter-dramatique-audio/` : Scripts et audios basés sur Primal Hunter.
-- `Battle_Zone_L_Evasion_du_Systeme.md` : Roman LitRPG dans l'univers.
-- `Zazie_dans_le_Metro_Script_Dramatique.md` : Adaptation en dramatique audio.
+Les dramatiques audio et fictions sonores ont été déplacées dans un dépôt dédié :
+👉 **[github.com/Fuzatifan/dramatiques-audio](https://github.com/Fuzatifan/dramatiques-audio)**
 
 ## 🚀 Installation des outils
 
